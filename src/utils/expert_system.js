@@ -27,7 +27,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
   }
 
   if (isCold && symptoms.has("sore throat")) {
-    if (symptoms.has("antibiotic allergy")) {
+    if (symptoms.has("antibiotics allergy")) {
       return "Please take Tylenol for medication.";
     } else {
       return "Please take antibiotics for medication.";
