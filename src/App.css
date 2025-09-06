@@ -137,3 +137,46 @@ input[type="text"]:focus {
 .response-header {
   margin-bottom: 0px;
 }
+
+/* Mobile responsiveness adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .main-content {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .medication-div {
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .symptom-grid {
+    grid-template-columns: 1fr; /* Changes to a single column layout */
+    margin: 10px;
+    gap: 5px;
+  }
+  
+  button {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+  
+  .temperature-div {
+    flex-direction: column; /* Stacks items vertically */
+    margin: 10px;
+  }
+  
+  input[type="text"] {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+}

@@ -49,18 +49,3 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-/* Mobile responsiveness
-  Adjust font sizes and padding for screens smaller than 768px
-*/
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2.5em; /* Smaller font size for smaller screens */
-    line-height: 1.2;
-  }
-
-  button {
-    padding: 0.5em 1em; /* Slightly less padding for buttons */
-    font-size: 0.9em; /* Smaller font size for buttons */
-  }
-}
