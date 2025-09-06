@@ -62,7 +62,7 @@ function App() {
     <div className="main-content">
       <div className="header">
         <h1>Hippocrates' Tool</h1>
-        <p>Get proper treatment now!</p>
+        <p>Get proper medication now!</p>
       </div>
       <div className="user-information">
         <div className="temperature-div">
