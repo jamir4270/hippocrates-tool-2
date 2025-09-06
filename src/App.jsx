@@ -92,13 +92,15 @@ function App() {
       </div>
       <div className="medication-div">
         <h3 className="response-header">Hippocrates' Response</h3>
-        <p className="response">
-          {submit
-            ? medication
-            : () => {
-                setMedication("");
-              }}
-        </p>
+        <div className="diagnosis">
+          <p className="response">
+            {submit
+              ? medication
+              : () => {
+                  setMedication("");
+                }}
+          </p>
+        </div>
       </div>
     </div>
   );

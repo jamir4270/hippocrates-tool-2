@@ -19,6 +19,7 @@ h1 {
   background-color: #9fe2a3;
   margin: 20px;
   border-radius: 15px;
+  flex-wrap: wrap;
 }
 
 .header {
@@ -43,6 +44,7 @@ h1 {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 10px;
   margin: 20px;
+  justify-content: center;
 }
 
 button {
@@ -124,4 +126,14 @@ input[type="text"]:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.diagnosis {
+  height: auto;
+  margin: 0px;
+  width: 300px;
+}
+
+.response-header {
+  margin-bottom: 0px;
 }
