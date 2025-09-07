@@ -33,6 +33,7 @@ function App() {
       });
     }
     setSubmit(false);
+    setMedication("");
   };
 
   const handleButtonClick = () => {
@@ -40,10 +41,10 @@ function App() {
       const newMedication = ExpertSystem(selectedSymptoms, temperature);
       setMedication(newMedication);
       setSubmit(true);
-      setSelectedSymptoms(() => {
+      /*setSelectedSymptoms(() => {
         const newSet = new Set();
         return newSet;
-      });
+      });*/
     }
   };
 
@@ -55,7 +56,7 @@ function App() {
     if (value === "" || regex.test(value)) {
       setTemperature(value);
     }
-    setSubmit(false);
+    //setSubmit(false);
   };
 
   return (
