@@ -20,6 +20,30 @@ function App() {
 
   const handleCardClick = (symptom) => {
     if (!selectedSymptoms.has(symptom)) {
+      if (
+        selectedSymptoms.has("light nasal breathing") &&
+        symptom === "heavy nasal breathing"
+      ) {
+        setSelectedSymptoms((prevSelectedSymptoms) => {
+          const set = new Set(prevSelectedSymptoms);
+          set.delete("light nasal breathing");
+          set.add(symptom);
+          return set;
+        });
+      }
+      if (
+        selectedSymptoms.has("heavy nasal breathing") &&
+        symptom === "light nasal breathing"
+      ) {
+        setSelectedSymptoms((prevSelectedSymptoms) => {
+          const set = new Set(prevSelectedSymptoms);
+          set.delete("heavy nasal breathing");
+          set.add(symptom);
+          return set;
+        });
+      }
+    }
+    if (!selectedSymptoms.has(symptom)) {
       setSelectedSymptoms((prevSelectedSymptoms) => {
         const newSet = new Set(prevSelectedSymptoms);
         newSet.add(symptom);
