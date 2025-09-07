@@ -2,6 +2,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
   const symptoms = new Set(selectedSymptoms);
   const diagnosisList = [];
 
+  //Rules 1 to 3
   if (temperature < 37.0) {
     symptoms.add("no fever");
   } else if (temperature >= 37.0 && temperature < 38.0) {
@@ -12,6 +13,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
     diagnosisList.push("high fever");
   }
 
+  //Rule 4 and 5
   if (symptoms.has("light nasal breathing")) {
     symptoms.add("nasal discharge");
     diagnosisList.push("nasal discharge");
@@ -20,6 +22,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
     diagnosisList.push("sinus membranes swelling");
   }
 
+  //Rule 6
   let isCold = false;
   if (
     symptoms.has("low fever") &&
@@ -32,7 +35,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
   }
 
   const diagnosis = `You have ${diagnosisList.join(", ")}. `;
-
+  //Rule 7 to 12
   if (isCold && symptoms.has("sore throat")) {
     if (symptoms.has("antibiotics allergy")) {
       return diagnosis + "Please take Tylenol for medication.";

@@ -79,6 +79,7 @@ function App() {
 
     if (value === "" || regex.test(value)) {
       setTemperature(value);
+      setSubmit(false);
     }
     //setSubmit(false);
   };
