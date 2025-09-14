@@ -35,6 +35,7 @@ export function ExpertSystem(selectedSymptoms, temperature) {
   }
 
   const diagnosis = `You have ${diagnosisList.join(", ")}. `;
+
   //Rule 7 to 12
   if (isCold && symptoms.has("sore throat")) {
     if (symptoms.has("antibiotics allergy")) {
